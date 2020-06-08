@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EfCore.LongRunningQueryLogger</name>
+    </assembly>
+    <members>
+        <member name="M:EfCore.LongRunningQueryLogger.LongRunningQueryInterceptorOptions.#ctor(System.TimeSpan,Microsoft.Extensions.Logging.LogLevel,System.Nullable{Microsoft.Extensions.Logging.LogLevel},System.Nullable{Microsoft.Extensions.Logging.LogLevel})">
+            <summary>
+            Define options for the interceptor
+            </summary>
+            <param name="logLevelCommandStartedExecuting">If specified, it will log on any db command started</param>
+            <param name="logLevelCommandFinishedExecuting">If specified, it will log after any db command finished</param>
+            <param name="threshold">Threshold for db command duration for logging</param>
+            <param name="logLevelIfThresholdExceeded">The log level for thresold exceed</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Title>EFCore Long Running Queries Logger</Title>
+        <PackageId>EFCore.LongRunningQueriesLogger</PackageId>
+        <Authors>oguzhankahyaoglu</Authors>
+        <Description>An useful EntityFrameworkCore interceptor to find long running queries against the database. Apart from using any profiler, it will log an error (or anything depending on the configuration) if the specified threshold exceeded.</Description>
+        <PackageProjectUrl>https://github.com/oguzhankahyaoglu/efcore.long-running-query-logger</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/oguzhankahyaoglu/efcore.long-running-query-logger</RepositoryUrl>
+        <PackageTags>entityframeworkcore efcore long running query logger</PackageTags>
+        <PackageVersion>1.0.0</PackageVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\EfCore.LongRunningQueryLogger.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\EfCore.LongRunningQueryLogger.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.0" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
+    </ItemGroup>
+
+</Project>
