@@ -6,6 +6,7 @@ An useful EntityFrameworkCore interceptor to find long running queries against t
 
 Install nuget package: EFCore.LongRunningQueriesLogger
 
+[![nuget](https://img.shields.io/nuget/v/EFCore.LongRunningQueriesLogger.svg)](https://www.nuget.org/packages/EFCore.LongRunningQueriesLogger/)
 # Usage
 
 Add interceptor to db context on either OnConfigure of DbContext, or at startup.cs
