@@ -12,6 +12,7 @@ Install nuget package: EFCore.LongRunningQueriesLogger
 Add interceptor to db context on either OnConfigure of DbContext, or at startup.cs
 
 ````
+//resolve specific logger from your DI provider, sample is Windsor
 var logger = IocManager.Instance.Resolve<ILogger<LongRunningQueryInterceptor>>();
 options.DbContextOptions.AddInterceptors(new LongRunningQueryInterceptor(logger, new LongRunningQueryInterceptorOptions(
     TimeSpan.FromMilliseconds(10),
